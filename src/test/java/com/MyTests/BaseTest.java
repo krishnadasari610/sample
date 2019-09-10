@@ -16,7 +16,7 @@ import com.mypages.Page;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 /**
- * @author NaveenKhunteta
+ * @author 
  *
  */
 public class BaseTest {

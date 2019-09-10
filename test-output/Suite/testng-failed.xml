@@ -9,7 +9,9 @@
     <classes>
       <class name="com.MyTests.LoginTest">
         <methods>
+          <include name="verifyLoginPageHeaderTest"/>
           <include name="tearDown"/>
+          <include name="doLoginTest"/>
           <include name="verifyLoginPageTitleTest"/>
           <include name="setUpTest"/>
         </methods>

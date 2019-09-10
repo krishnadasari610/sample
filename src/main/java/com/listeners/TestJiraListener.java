@@ -30,14 +30,15 @@ public class TestJiraListener implements ITestListener {
 		if (isTicketReady) {
 			// raise jira ticket:
 			System.out.println("is ticket ready for JIRA: " + isTicketReady);
-			JiraServiceProvider jiraSp = new JiraServiceProvider("https://naveenautomationlabs.atlassian.net",
-					"naveenanimation20@gmail.com", "jaizMlfaUkTfffNOVPq29B29", "TA");
+			JiraServiceProvider jiraSp = new JiraServiceProvider("https://testrapiscan.atlassian.net/",
+					"rapiscantest@yopmail.com", "c9d6g5XlagxkUQjfPJht8441", "TES");
 			String issueSummary = result.getMethod().getConstructorOrMethod().getMethod().getName()
 					+ "got failed due to some assertion or exception";
 			String issueDescription = result.getThrowable().getMessage() + "\n";
 			issueDescription.concat(ExceptionUtils.getFullStackTrace(result.getThrowable()));
+			
 
-			jiraSp.createJiraTicket("Bug", issueSummary, issueDescription, "Naveen");
+			jiraSp.createJiraTicket("Bug", issueSummary, issueDescription, "GopiD");
 		}
 
 	}

@@ -24,6 +24,7 @@ public class JiraServiceProvider {
 			FluentCreate fleuntCreate = jira.createIssue(project, issueType);
 			fleuntCreate.field(Field.SUMMARY, summary);
 			fleuntCreate.field(Field.DESCRIPTION, description);
+			//fleuntCreate.field(Field.ASSIGNEE, attachment);
 			Issue newIssue = fleuntCreate.execute();
 			System.out.println("new issue created in jira with ID: " + newIssue);
 

@@ -11,12 +11,12 @@ import com.mypages.LoginPage;
 import com.util.JiraPolicy;
 
 /**
- * @author NaveenKhunteta
+ * @author 
  *
  */
 public class LoginTest extends BaseTest{
 	
-	@JiraPolicy(logTicketReady=false)
+	@JiraPolicy(logTicketReady=true)
 	@Test(priority=1, enabled=true)
 	public void verifyLoginPageTitleTest(){
 		String title = page.getInstance(LoginPage.class).getLoginPageTitle();
@@ -24,22 +24,22 @@ public class LoginTest extends BaseTest{
 		Assert.assertEquals(title, "HubSpot LoginXX");
 	}
 	
-//	@JiraPolicy(logTicketReady=true)
-//	@Test(priority=2, enabled=true)
-//	public void verifyLoginPageHeaderTest(){
-//		String header = page.getInstance(LoginPage.class).getLoginPageHeader();
-//		System.out.println(header);
-//		Assert.assertEquals(header, "Don't have an account?XXX");
-//	}
-//	
-//	@JiraPolicy(logTicketReady=true)
-//	@Test(priority=3)
-//	public void doLoginTest(){
-//		HomePage homePage = page.getInstance(LoginPage.class).doLogin("naveenanimation20@gmail.com", "Test@12345");
-//		String headerHome = homePage.getHomePageHeader();
-//		System.out.println(headerHome);
-//		Assert.assertEquals(headerHome, "Getting started with HubSpotXXXXX");
-//	}
+	@JiraPolicy(logTicketReady=true)
+	@Test(priority=2, enabled=true)
+	public void verifyLoginPageHeaderTest(){
+		String header = page.getInstance(LoginPage.class).getLoginPageHeader();
+		System.out.println(header);
+		Assert.assertEquals(header, "Don't have an account?XXX");
+	}
+	
+	@JiraPolicy(logTicketReady=true)
+	@Test(priority=3)
+	public void doLoginTest(){
+		HomePage homePage = page.getInstance(LoginPage.class).doLogin("naveenanimation20@gmail.com", "Test@12345");
+		String headerHome = homePage.getHomePageHeader();
+		System.out.println(headerHome);
+		Assert.assertEquals(headerHome, "Getting started with HubSpotXXXXX");
+}
 	
 	
 	
